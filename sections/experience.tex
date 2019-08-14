@@ -12,13 +12,15 @@
 \item \begin{project}{Research Intern, NYU Tandon}{May '19 - July '19}{Prof. Paweł Korus, Prof. Nasir Memon}
     \item Researched robust image hashes that are immune to typical image transformations, while being sensitive to malicious image edits such as face swaps, deep fakes, object addition/deletion.
     \item Constructed models that take an image and output a binary hash that would give lower \href{https://en.wikipedia.org/wiki/Hamming\_distance}{\textit{Hamming distances}} for hashes of similar images while giving more considerable distances for dissimilar images.
-    \item Trained various novel network architectures on the \href{https://dl.acm.org/citation.cfm?id=1756042}{\textit{triplet loss}} along with \href{https://arxiv.org/abs/1503.03832}{\textit{mining}} of examples for improved training.
+    \item Developed a \textit{framework} for testing against compression, contrast changes, gamma, blurring, warping.
+    \item Developed a \textit{framework} for testing against transformations like compression, contrast changes, blurring, warping.
+    \item Developed a test framework to obtain metrics based on Hamming distances of hashes of images against common transformations such as JPEG compression, gamma correction, contrast adjustments, blurring, warping.
+    \item Trained various network architectures on the \href{https://dl.acm.org/citation.cfm?id=1756042}{\textit{triplet loss}} along with \href{https://arxiv.org/abs/1503.03832}{\textit{mining}} of examples for improved training.
+    \item Trained various novel network architectures on the \textit{triplet loss} along with \textit{mining} of examples for improved training.
     \item Trained Various novel network architectures on different loss functions, notably the \textit{triplet loss}, along with \textit{mining} of examples for improved training by targeting semi-hard examples, similar to \href{https://arxiv.org/abs/1503.03832}{\textit{FaceNet}}.
     \item The baseline architecture was a C++ based non-learning model that uses the Discrete Cosine Transform (DCT) coefficients to calculate the hash, interfaced with Python using Cython.
     \item Tested other architectures including one with MobileNet as the feature extractor and a fully-connected layer, another neural network to approximate the baseline model, and a third one to combine both of these.
     \item Tested the networks against \textit{adversarial attacks} such as \href{https://arxiv.org/abs/1412.6572}{\textit{FGSM}}, \href{https://arxiv.org/abs/1706.06083}{\textit{Projected Gradient Descent}}, \href{https://arxiv.org/abs/1712.04248}{\textit{Boundary Attack}}.
-    \item Developed a \textit{framework} for testing against transformations like compression, contrast changes, blurring, warping.
-    \item Developed a test framework to obtain metrics based on Hamming distances of hashes of images against common transformations such as JPEG compression, gamma correction, contrast adjustments, blurring, warping.
     \item Carried out black-box attack against the baseline model using an approximate substitute architecture.
     \item Advanced adversarial attacks and defences to make the models robust will be implemented.
 \end{project}
@@ -31,22 +33,24 @@
     \item Modified the standard temporal update rule for the Hebbian matrix (plastic weights) for convolutional layers, by using transpose convolution for an efficient method of obtaining the plasticity update.
     \item Tested \textit{bilinear interpolation} followed by convolution as an alternative to transpose convolution.
     \item Accounted for downsampling of the image (due to the usage of stridden convolution) in the new update rule by using bilinear interpolation of the initial convolution output as the kernel.
+    \item Achieved notable improvement in classification accuracy using full plasticity, when adapting models trained on the SVHN dataset for the MNIST dataset.
     \item Achieved notable improvement in classification accuracy for the 20 layer models using full plasticity, when adapting models trained on the SVHN dataset for the MNIST dataset.
     \item Initial results indicate notable improvement in classification accuracy by usage of differentiable plasticity in convolutional layers for the 20 layer models, while negligible improvement was observed for the 56 layer models.
 \end{project}
 
 \item \begin{project}{Intern, Machine Learning Team, New York Office of IIT Kanpur}{May '17 - July '18}{Prof. Manindra Agrawal}
-    \item Implemented an \textit{online} document vectorisation model based on the \href{https://arxiv.org/abs/1405.4053}{\textit{Distributed Memory paragraph vectors}} model.
-    \item Created an online \textit{Doc2Vec} model based on the \textit{Distributed Memory} model, initially trained offline, then deployed.
-    \item Used the \href{https://www.researchgate.net/publication/227988510\_Automatic\_Keyword\_Extraction\_from\_Individual\_Documents}{\textit{RAKE}} algorithm to assign word importance scores to each word in the document and use them for a weighted average of \href{https://nlp.stanford.edu/projects/glove/}{\textit{GloVe}} word vectors for the document vector, later concatenated with the \textit{Doc2Vec} vector.
-    \item Integrated \textit{Apache Kafka} with the model for efficient stream implementations of the input-output pipeline.
-    \item Created a \textit{Docker} image of the combined model for online deployment.
-
-    \vspace{3mm}
     \item Used the RAKE algorithm to assign word importance scores to each word in the short RSS summary and use them for a weighted average of Google News \textit{Word2Vec} word vectors for the news’ vector.
     \item Developed an \textit{online} text clustering model using a \href{https://github.com/cloudwalkio/ddbscan}{fully-online modification} of the \textit{DBSCAN} algorithm.
     \item Created an online clustering model for the news’ vector to identify articles having follow-up articles, using a modification of \textit{DBSCAN} optimized for discrete \& bounded data, to updates clusters on a per-article basis.
     \item Used a \textit{tf-idf} weighted \href{https://dl.acm.org/citation.cfm?id=2995016}{\textit{time series analysis}} of article words to assign a trend score to top articles.
+    \item Integrated \textit{Apache Kafka} with the model for efficient stream implementations of the input-output pipeline.
+    \item Created a \textit{Docker} image of the combined model for online deployment.
+
+    \vspace{3mm}
+    \item Implemented an \textit{online} document vectorisation model using \href{https://arxiv.org/abs/1405.4053}{\textit{Distributed Memory paragraph vectors}}.
+    \item Implemented an \textit{online} document vectorisation model based on the \href{https://arxiv.org/abs/1405.4053}{\textit{Distributed Memory paragraph vectors}} model.
+    \item Created an online \textit{Doc2Vec} model based on the \textit{Distributed Memory} model, initially trained offline, then deployed.
+    \item Used the \href{https://www.researchgate.net/publication/227988510\_Automatic\_Keyword\_Extraction\_from\_Individual\_Documents}{\textit{RAKE}} algorithm to assign word importance scores to each word in the document and use them for a weighted average of \href{https://nlp.stanford.edu/projects/glove/}{\textit{GloVe}} word vectors for the document vector, later concatenated with the \textit{Doc2Vec} vector.
     \item Integrated \textit{Apache Kafka} with the model for efficient stream implementations of the input-output pipeline.
     \item Created a \textit{Docker} image of the combined model for online deployment.
 
@@ -66,6 +70,7 @@
     \item Using HTTP requests in Python, created a program that incorporates the \textit{Word2Vec} model and \textit{Word Mover’s Distance} to obtain articles from a website stream and append original articles on a stream of trending content.
 
     \vspace{3mm}
+    \item Trained a Convolutional Neural Network with sliding windows for English Optical Character Recognition.
     \item Trained a Convolutional Neural Network with sliding windows for English Optical Character Recognition (OCR).
     \item Studied Convolutional Neural Networks for learning from images.
     \item Used \textit{OpenCV} to augment the dataset using elastic deformations, rotations in images, slimming of the characters.
