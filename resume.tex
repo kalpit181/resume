@@ -6,20 +6,24 @@
 \usepackage{fontawesome}  % for icons like GitHub, email, mobile, etc.
 \usepackage{tabularx}  % for custom columns having auto width
 \usepackage{booktabs}  % for good-looking table lines
+\usepackage{multicol}  % for two-column layout
+\usepackage{enumitem}  % for changing indentation of itemize
 
 % Custom styling for section
-\titleformat{\section}{\Large\scshape}{\thesection}{2mm}{\vspace{-2mm}}[\vspace{-3mm}\hrulefill\vspace{-1mm}]
+\titleformat{\section}{\Large\scshape}{\thesection}{2mm}{\vspace{-4mm}}[\vspace{-3mm}\hrulefill\vspace{-2mm}]
+
+% Changing indentation for itemize
+\setitemize{leftmargin=5mm}
 
 % Custom environment to be used for a single project, internship, etc.
 % First argument is an OPTIONAL link
 % Second argument is the name of the project
 % Third argument is the date/duration
-% Fourth argument is the name of the mentor(s)
-\newenvironment{project}[4][]  % optional link is by default empty
+\newenvironment{project}[3][]  % optional link is by default empty
 {
-    \textbf{#2} \hfill {\small #3}\\
-    \textit{\small #4} \hfill \href{#1}{\small #1}
-    \begin{itemize}
+    \href{#1}{\color{black}{\textbf{#2}}}\\
+    \textit{\small #3}\\[-5mm]
+    \begin{itemize}[leftmargin=0mm]
 }
 {
     \end{itemize}
@@ -29,11 +33,10 @@
 % First argument is an OPTIONAL link
 % Second argument is the name of the project
 % Third argument is the date/duration
-% Fourth argument is the name of the mentor(s)
-\newcommand{\emptyproject}[4][]  % optional link is by default empty
+\newcommand{\emptyproject}[3][]  % optional link is by default empty
 {
-    \textbf{#2} \hfill {\small #3}\\
-    \textit{\small #4} \hfill \href{#1}{\small #1}
+    \href{#1}{\color{black}{\textbf{#2}}}\\
+    \textit{\small #3}
 }
 
 % Miscellaneous options
@@ -43,6 +46,7 @@
     pdfkeywords={resume, cv}
 }
 \pagenumbering{gobble}  % hide page numbering
+\setlength{\columnsep}{8mm}  % set separation between the two columns
 
 \title{R. Harish - Resume}
 \author{Harish Rajagopal}
@@ -50,10 +54,10 @@
 \begin{document}
     \input{sections/header.tex}
     \input{sections/qualifications.tex}
-    \input{sections/achievements.tex}
-    \input{sections/experience.tex}
-    \input{sections/projects.tex}
-    \input{sections/skills.tex}
-    \input{sections/courses.tex}
-    \input{sections/responsibilities.tex}
+    \begin{multicols}{2}
+        \input{sections/achievements.tex}
+        \input{sections/experience.tex}
+        \input{sections/projects.tex}
+        \input{sections/skills.tex}
+    \end{multicols}
 \end{document}
