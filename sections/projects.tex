@@ -10,37 +10,36 @@
 \section*{Projects}
 \begin{itemize}
 
+\item \begin{project}[https://github.com/rharish101/CS335A]{Compiler for Golang in Python}{Jan '19 - Apr '19}{Prof. Amey Karkare, CS335A Course Project}
+    \item Developed a compiler for translating Golang to MIPS written in Python as part of a course.
+    \item Implemented basic C-like features like data types, variables, expressions, control statements (if-else, switch, loops), arrays, functions, pointers, structs, library imports, and I/O.
+    \item Implemented advanced features like composite literals, struct embeddings, typedefs/aliases, operator overloading, multiple value returns, multiple parallel assignments, short declarations, and short-circuit evaluation.
+\end{project}
+
+\item \begin{project}[https://github.com/rharish101/CS330-Assignments]{GemOS - Operating Systems Development}{Aug '18 - Nov '18}{Prof. Debadatta Mishra, CS330A}
+    \item Developed an object-store FUSE filesystem for storing files inside a single directory.
+    \item Implemented process scheduling and swapping, context creation, sleeping, and signal handling for GemOS.
+    \item Implemented syscalls for writing \& expanding/shrinking memory, and handlers for page faults \& divide-by-zero.
+    \item Implemented virtual memory and paging using a 4-depth radix tree page table.
+\end{project}
+
+\item \begin{project}[https://nfcl.pythonanywhere.com]{No-Frills Cab Locator - Android App}{Sept '18 - Nov '18}{Prof. Nisheeth Srivastava, CS252A Course Project}
+    \item A one-button-touch cab service with apps created using the \href{https://ionicframework.com/}{\textit{Ionic framework}} for Android as part of a course.
+    \item Developed separate customer and driver apps using \textit{Angular2} in Typescript and \textit{Sass} for styling.
+    \item Setup a slim \textit{Django} server to find nearest drivers, with an SQL database to store available drivers.
+\end{project}
+
 \item \begin{project}[https://cse.iitk.ac.in/users/rharish/ugp2]{Improving GANs through Test-Time Constraints}{Jan '19 - Present}{Prof. Vinay Namboodiri and Prof. Chetan Arora}
     \item Pre-trained \href{https://arxiv.org/abs/1406.2661}{\textit{Generative Adversarial Networks}} (GANs) are fine-tuned using \textit{interactive user input}, inspired by the \href{https://arxiv.org/abs/1609.03552}{iGAN} paper and the paper \href{https://arxiv.org/abs/1811.09796}{Exploiting Test Time Evidence to Improve Predictions of Deep Neural Networks}.
     \item The user provides sketches of edges on a single output of the generator, and a \textit{difference-of-Gaussians} based loss is backpropagated through the generator to fine-tune the generator's weights.
     \item A regularisation term in the loss prevents the weights from deviating away from the weights learned initially.
 \end{project}
 
-\item \begin{project}[https://cse.iitk.ac.in/users/rharish/ugp1]{Multi-Agent GANs for Image Super-Resolution}{Aug '18 - Dec '18}{Prof. Vinay Namboodiri}
-    \item A \textit{Multi-agent generalisation} of \href{https://arxiv.org/abs/1609.04802}{SRGAN} inspired by \href{http://openaccess.thecvf.com/content_cvpr_2018/papers_backup/Ghosh_Multi-Agent_Diverse_Generative_CVPR_2018_paper.pdf}{MADGANs} for image super-resolution in \textit{TensorFlow}.
-    \item Four generators (with shared lower layers) get the four corner sections of the input (with a slight overlap), and their outputs are joined (negating the overlap) to get the final high-resolution image.
-    \item Each generator pairs with a discriminator, while a global discriminator acts on the final output.
-\end{project}
+\item \emptyproject[https://cse.iitk.ac.in/users/rharish/ugp1]{Multi-Agent GANs for Image Super-Resolution}{Aug '18 - Dec '18}{Prof. Vinay Namboodiri}
 
-\item \begin{project}[https://github.com/rharish101/CS771-Project]{Higher-Order Optimisation in Deep Learning}{Sept '18 - Nov '18}{Prof. Piyush Rai, CS771A Course Project}
-    \item A survey on the use of \textit{quasi-Newton methods} in deep learning as part of a course.
-    \item Surveyed \href{http://www.cs.toronto.edu/~jmartens/docs/Deep_HessianFree.pdf}{\textit{Hessian-Free optimisation}}, \href{https://arxiv.org/abs/1511.01169}{\textit{AdaQN}}, and \href{https://arxiv.org/abs/1311.2115}{\textit{Sum of Functions Optimiser (SFO)}}.
-    \item Benchmarked Hessian-Free optimisation on an MLP against the \textit{Adam} and SGD optimisers in \textit{TensorFlow}.
-\end{project}
+\item \emptyproject[https://github.com/rharish101/CS771-Project]{Higher-Order Optimisation in Deep Learning}{Sept '18 - Nov '18}{Prof. Piyush Rai, CS771A Course Project}
 
-\item \begin{project}[https://github.com/rharish101/eye-in-the-sky]{7th Inter-IIT Tech Meet (Silver Medal)}{Dec '18}{IIT Kanpur Contingent}
-    \item The Eye in the Sky: Semantic segmentation of satellite images using a dataset of only 14 images.
-    \item Won \textit{2nd place} using the \href{http://discovery.ucl.ac.uk/10032237/7/David_08270673.pdf}{\textit{P-Net}} architecture, trained on an augmented dataset generated by slicing each image into multiple images and using rotations.
-    \item Tuned model hyperparameters using the \href{https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization}{\textit{Tree of Parzen Estimators}} method from the \href{https://hyperopt.github.io/hyperopt/}{\textit{Hyperopt}} library.
-\end{project}
-
-\item \begin{project}[https://github.com/rharish101/CS335A]{Compiler for Golang in Python}{Jan '19 - Apr '19}{Prof. Amey Karkare, CS335A Course Project}
-    \item A compiler for translating Golang to MIPS written in Python as part of a course.
-    \item Implemented basic C-like features like data types, variables, expressions, control statements (if-else, switch, loops), arrays, functions, pointers, structs, library imports, and I/O.
-    \item Implemented advanced features like composite literals, struct embeddings, typedefs/aliases, operator overloading, multiple value returns, multiple parallel assignments, short declarations, and short-circuit evaluation.
-\end{project}
-
-\item \emptyproject[https://nfcl.pythonanywhere.com]{No-Frills Cab Locator - Android App}{Sept '18 - Nov '18}{Prof. Nisheeth Srivastava, CS252A Course Project}
+\item \emptyproject[https://github.com/rharish101/eye-in-the-sky]{7th Inter-IIT Tech Meet (Silver Medal)}{Dec '18}{IIT Kanpur Contingent}
 
 \item \emptyproject[https://cse.iitk.ac.in/users/rharish/sixth-tech-meet]{6th Inter-IIT Tech Meet}{Dec '17 - Jan '18}{IIT Kanpur Contingent}
 
