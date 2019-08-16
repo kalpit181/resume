@@ -33,6 +33,7 @@
     \item Modified the standard temporal update rule for the Hebbian matrix (plastic weights) for convolutional layers, by using transpose convolution for an efficient method of obtaining the plasticity update.
     \item Tested \textit{bilinear interpolation} followed by convolution as an alternative to transpose convolution.
     \item Accounted for downsampling of the image (due to the usage of stridden convolution) in the new update rule by using bilinear interpolation of the initial convolution output as the kernel.
+    \item Achieved improvement in classification accuracy, when adapting models from the SVHN dataset to MNIST.
     \item Achieved notable improvement in classification accuracy using full plasticity, when adapting models trained on the SVHN dataset for the MNIST dataset.
     \item Achieved notable improvement in classification accuracy for the 20 layer models using full plasticity, when adapting models trained on the SVHN dataset for the MNIST dataset.
     \item Initial results indicate notable improvement in classification accuracy by usage of differentiable plasticity in convolutional layers for the 20 layer models, while negligible improvement was observed for the 56 layer models.
@@ -60,6 +61,7 @@
     \item Created scrapers for various websites to obtain content and various metadata.
     \item Studied the CouchDB and Couchbase NOSQL databases and stored scraped data on a Couchbase database.
     \item Created a program to use these scrapers to obtain content from different  websites, while avoiding duplicates by using a Redis server, and store them internally for later processing.
+    \item Deployed above models using Docker and integrated with existing infrastructure using Apache Kafka.
 
     \vspace{3mm}
     \item Developed a \href{https://arxiv.org/abs/1301.3781}{\textit{Word2Vec}} model to identify duplicate documents using \href{http://proceedings.mlr.press/v37/kusnerb15.html}{\textit{Word Mover's Distance}} on word vectors.
