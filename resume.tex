@@ -1,5 +1,5 @@
 \documentclass[10pt, a4paper]{article}
-\usepackage[margin=1cm]{geometry}  % for setting page margins
+\usepackage[margin=8mm,top=7mm,bottom=6mm]{geometry}  % for setting page margins
 \usepackage[gray]{xcolor}  % convert entire PDF to grayscale
 \usepackage[pdfusetitle]{hyperref}  % control hyperlink formatting and auto-add PDF metadata
 \usepackage{titlesec}  % for changing section styling
@@ -22,8 +22,8 @@
 \newenvironment{project}[3][]  % optional link is by default empty
 {
     \href{#1}{\color{black}{\textbf{#2}}}\\
-    \textit{\small #3}\\[-5mm]
-    \begin{itemize}[leftmargin=0mm]
+    \textit{\small #3}\\[-7mm]
+    \begin{itemize}[leftmargin=0mm,itemsep=0mm]
 }
 {
     \end{itemize}
@@ -46,7 +46,7 @@
     pdfkeywords={resume, cv}
 }
 \pagenumbering{gobble}  % hide page numbering
-\setlength{\columnsep}{8mm}  % set separation between the two columns
+\setlength{\columnsep}{3mm}  % set separation between the two columns
 
 \title{R. Harish - Resume}
 \author{Harish Rajagopal}
