@@ -19,10 +19,11 @@
 % First argument is an OPTIONAL link
 % Second argument is the name of the project
 % Third argument is the date/duration
-\newenvironment{project}[3][]  % optional link is by default empty
+% Fourth argument is the name of the mentor(s)
+\newenvironment{project}[4][]  % optional link is by default empty
 {
     \href{#1}{\color{black}{\textbf{#2}}}\\
-    \textit{\small #3}\\[-6mm]
+    \textit{\small #4} \hfill {\small #3}\\[-6mm]
     \begin{itemize}[leftmargin=0mm,itemsep=0mm]
 }
 {
@@ -33,10 +34,11 @@
 % First argument is an OPTIONAL link
 % Second argument is the name of the project
 % Third argument is the date/duration
-\newcommand{\emptyproject}[3][]  % optional link is by default empty
+% Fourth argument is the name of the mentor(s)
+\newcommand{\emptyproject}[4][]  % optional link is by default empty
 {
     \href{#1}{\color{black}{\textbf{#2}}}\\
-    \textit{\small #3}
+    \textit{\small #4} \hfill {\small #3}
 }
 
 % Miscellaneous options
