@@ -36,13 +36,13 @@
 % Third argument is the date/duration
 % Fourth argument is the name of the mentor(s)
 \newcommand{\emptyproject}[4][]  % optional link is by default empty
-{
+{%
     \href{#1}{\color{black}{\textbf{#2}}}\\
     \textit{\small #4} \hfill {\small #3}
 }
 
 % Miscellaneous options
-\hypersetup{
+\hypersetup{%
     colorlinks=true,  % do not draw boxes around links, color the links themselves
     pdfsubject={Resume},
     pdfkeywords={resume, cv}
@@ -50,7 +50,7 @@
 \pagenumbering{gobble}  % hide page numbering
 \setlength{\columnsep}{2mm}  % set separation between the two columns
 
-\title{R. Harish - Resume}
+\title{R. Harish --- Resume}
 \author{Harish Rajagopal}
 
 \begin{document}
